@@ -1,3 +1,10 @@
+//Film.java by Daragh Carroll t00201097
+/*
+This instanceable class stores and utilizes variable that contain information about a film.
+It can be used to create a 'Film' object in a program class.
+ */
+
+
 package FilmApplication;
 
 public class Film {
@@ -65,11 +72,18 @@ public class Film {
 
     // Constructors
 
+    //No Argument Constructor
     public Film()
     {
         this("Unknown title", "Unknown Director", 0);
     }
 
+    /**
+     * 3 argument constructor
+     * @param title the title of the Film object(String)
+     * @param director the director of the Film object(String)
+     * @param duration the duration of the Film object(int)
+     */
     public Film(String title, String director, int duration)
     {
         setTitle(title);
@@ -81,6 +95,6 @@ public class Film {
     @Override
     public String toString()
     {
-        return "Title: " + getTitle() + "\nDirector: " + getDirector() + "\nDuration: " + getDuration() + "min";
+        return String.format("%-20s%-30s\n%-20s%-30s\n%-20s%-3d%-4s","Title:",getTitle(),"Director:", getDirector(), "Duration: ", getDuration(), " mins");
     }
 }
